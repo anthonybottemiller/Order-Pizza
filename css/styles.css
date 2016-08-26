@@ -1,11 +1,52 @@
+body {
+  color: white;
+  background-color: #B25900;
+}
+
 h1 {
   text-align: center;
 }
+
+img {
+  width: 30%;
+  height: auto;
+}
+
+.page-header {
+  text-align: center;
+  background-color: #FF8000;
+  border: 10px solid #FF8000;
+  border-radius: 20px;
+}
+  
+.menu {
+  background-color: #FF8C1A;
+}
+
 .order {
   display: none;
 }
 
-.contact-info {
+.order-summary {
+  display: none;
+  text-align: center;
+  background-color: #FF8000;
+  border: 10px solid #FF8000;
+  border-radius: 20px;
+}
+
+.menu h3 {
+  text-align: center;
+}
+
+.page-header ul {
   list-style: none;
+}
+
+#splash-button-wrapper {
+  text-align: center;
+}
+
+#submit {
   float: right;
 }

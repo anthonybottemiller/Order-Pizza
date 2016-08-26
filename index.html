@@ -9,34 +9,91 @@
 </head>
 <body>
   <div class="container">
-    <h1>House of Sanders Pizza</h1>
-    <ul class="contact-info">
-      <li>175 N 1st Street Kalama, WA 98625</li>
-      <li>Phone: 360-335-5555</li>
-    </ul>
-    <div class="intro-splash jumbotron">
-    <h4>Welcome to House of Sanders!</h4>
-    <p>We offer the finest in pizza pies! We offer different sizes and only the finest in toppings. If you wish to place an order please click the <b>Order Now</b> button. Otherwise feel free to give us a call or drop in!</p>
-    <button id="order-now" class="btn btn-success">Order Now</button>
+    <div class="row page-header">
+      <h1>House of Sanders Pizza</h1>
+      <img src="img/pizza.png" alt="Picture of a Pepperoni Pizza">
+      <ul class="contact-info">
+        <li>Monday - Saturday 10:00 AM to 10:00 PM</li>
+        <li>175 N 1st Street Kalama, WA 98625</li>
+        <li>Phone: 360-335-5555</li>
+      </ul>
     </div>
-    <div class="order" id="pizza0">
-      <div class="size">
-        <h4>Pizza Size</h4>
-        <select class="size-dropdown">
-          <option value="small">Small</option>
-          <option value="medium">Medium</option>
-          <option value="large">Large</option>
-        </select>
-      </div>
-      <div class="toppings">
-        <h4>Toppings</h4>
-        <div class="add-a-topping-button">
-          <button type="button" class="btn btn-warning" id="addTopping">Add a Topping!</button>
+    <div class="intro-splash">
+      <div class="row menu jumbotron">
+        <h4>Welcome to House of Sanders!</h4>
+        <p>We offer the finest in pizza pies! We offer different sizes and only the very best in toppings. If you wish to place an order please click the <b>Order Now</b> button. Otherwise feel free to give us a call or drop in!</p>
+        <h3>Menu</h3>
+        <div class="size-choices col-md-6">
+          <h4>Available Sizes</h4>
+          <p>Price is before toppings</p>
+          <ul>
+            <li>Small: $4.50</li>
+            <li>Medium: $6.50</li>
+            <li>Large: $8.50</li>
+          </ul>
+        </div>
+        <div class="topping-choices col-md-6">
+          <h4>Our Premium Toppings</h4>
+          <p>$1.50 Each</p>
+          <ul>
+            <li>Cheese</li>
+            <li>Pepperoni</li>
+            <li>Sausage</li>
+            <li>Beef</li>
+            <li>Canadian Bacon</li>
+            <li>Pineapple</li>
+            <li>Olive</li>
+          </ul>
+        </div>
+        <div id="splash-button-wrapper">
+          <button id="order-now" class="btn btn-success btn-lg">Order Now</button>
         </div>
       </div>
-      <button class="btn btn-primary btn-lg" id="submit">Submit Order</button>
+    </div>
+    <div class="order">
+      <div class="row menu jumbotron">
+        <h3>Menu</h3>
+        <div class="size-choices col-md-6">
+          <h4>Available Sizes</h4>
+          <p>Price is before toppings</p>
+          <ul>
+            <li>Small: $4.50</li>
+            <li>Medium: $6.50</li>
+            <li>Large: $8.50</li>
+          </ul>
+        </div>
+        <div class="topping-choices col-md-6">
+          <h4>Our Premium Toppings</h4>
+          <p>$1.50 Each</p>
+          <ul>
+            <li>Cheese</li>
+            <li>Pepperoni</li>
+            <li>Sausage</li>
+            <li>Beef</li>
+            <li>Canadian Bacon</li>
+            <li>Pineapple</li>
+            <li>Olive</li>
+          </ul>
+        </div>
+        <div class="size">
+          <h4>Pizza Size</h4>
+          <select class="size-dropdown">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+        <div class="toppings">
+          <h4>Toppings</h4>
+          <div class="add-a-topping-button">
+            <button type="button" class="btn btn-warning" id="addTopping">Add a Topping!</button>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-lg" id="submit">Submit Order</button>
+      </div>
     </div>
     <div class="order-summary">
+      <h2>Order Summary</h2>
       
     </div>
   </div>
