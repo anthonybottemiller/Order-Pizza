@@ -13,7 +13,7 @@ This page is intended to allow you to select toppings on a pizza. Then be given 
 
 ##Link
 
-[Click here to view](https://anthonybottemiller.github.io/order-pizza)
+[Click here to view](https://anthonybottemiller.github.io/Order-Pizza)
 
 ##Specifications
 
