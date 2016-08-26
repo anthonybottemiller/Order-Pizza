@@ -2,6 +2,9 @@ function pizza(){
   this.small = 4.50;
   this.medium = 6.50;
   this.large = 8.50;
+  this.pizzaSize;
+  this.toppings = [];
+  this.numberOfToppings;
 }
 pizza.prototype.sizePrice = function(size) {
   if (size === "small"){return this.small};
