@@ -44,13 +44,12 @@ function writeOrderSummary(pizza){
   $(".order-summary").append("<ul> </ul>")
   $(".order-summary ul").append("<li>Pizza Size: "+pizza.pizzaSize+"</li>")
   $(".order-summary ul").append("<li>Number of Toppings: "+pizza.numberOfToppings+"</li>")
-  $(".order-summary ul").append("<li>Price of Toppings: $"+pizza.toppingsPrice()+"</li>")
+  $(".order-summary ul").append("<li>Price of Toppings: "+formatOutput(pizza.toppingsPrice())+"</li>")
   $(".order-summary ul").append("<li>Order Total: "+formatOutput(pizza.pizzaPrice()))
 }
 
 $(document).ready(function(){
   var pizzaObject = new pizza;
-
   $("#order-now").click(function(){
     $(".intro-splash").fadeOut();
     $(".order").delay(500);
