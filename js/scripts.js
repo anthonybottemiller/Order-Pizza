@@ -1,3 +1,4 @@
+//Backend Logic
 function pizza(){
   this.small = 4.50;
   this.medium = 6.50;
@@ -22,7 +23,7 @@ return this.sizePrice()+this.toppingsPrice();
 pizza.prototype.toppingsPrice = function() {
   return this.numberOfToppings * 1.5;
 };
-
+// formatOutput returns the input number formatted for currency
 function formatOutput(number){
   var numberAsString = number.toString();
   var decimalPosition = 0;
@@ -31,10 +32,14 @@ function formatOutput(number){
       decimalPosition = i+2;
     };
   };
-  if (decimalPosition === 0){return "$"+number}
-  else {return "$"+number.toPrecision(decimalPosition)};
+  if (decimalPosition === 0){
+    return "$"+number
+  }
+  else {
+    return "$"+number.toPrecision(decimalPosition)
+  };
 };
-
+//Front End Functions
 function writeNewToppingSelection(pizzaObject){
   pizzaObject.numberOfToppings += 1;
   $(".toppings").append("<div id=toppings-0-"+pizzaObject.numberOfToppings+"> <select class='toppings-dropdown'> <option value='none'>None</option> <option value='Cheese'>Cheese</option> <option value='Pepperoni'>Pepperoni</option> <option value='Sausage'>Sausage</option> <option value='Beef'>Beef</option><option value='Canadian Bacon'>Canadian Bacon</option> <option value='Pineapple'>Pineapple</option> <option value='Olive'>Olive</option></select> </div>");
@@ -47,7 +52,7 @@ function writeOrderSummary(pizza){
   $(".order-summary ul").append("<li>Price of Toppings: "+formatOutput(pizza.toppingsPrice())+"</li>")
   $(".order-summary ul").append("<li>Order Total: "+formatOutput(pizza.pizzaPrice()))
 }
-
+// When Document is loaded
 $(document).ready(function(){
   var pizzaObject = new pizza;
   $("#order-now").click(function(){
