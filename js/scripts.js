@@ -35,10 +35,19 @@ function formatOutput(number){
 
 function writeNewToppingSelection(pizzaObject){
   pizzaObject.numberOfToppings += 1;
-  $(".toppings").append("<div id=toppings-0-"+pizzaObject.numberOfToppings+"> <h4>Toppings</h4> <select class='toppings-dropdown'> <option value='none'>None</option> <option value='cheese'>Cheese</option> </select> </div>");
+  $(".toppings").append("<div id=toppings-0-"+pizzaObject.numberOfToppings+"> <select class='toppings-dropdown'> <option value='none'>None</option> <option value='cheese'>Cheese</option> </select> </div>");
+}
+
+function writeOrderSummary(pizza){
+  $(".order-summary").append("<ul> </ul>")
+  $(".order-summary ul").append("<li>Pizza Size: "+pizza.pizzaSize+"</li>")
 }
 
 $(document).ready(function(){
+  $("#order-now").click(function(){
+    $(".intro-splash").hide();
+    $(".order").show();
+});
   var numberOfPizzas = 0;
   var pizzaObject = new pizza;
   $("#submit").click(function(){

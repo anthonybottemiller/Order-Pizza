@@ -5,11 +5,20 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <title>Order Pizza</title>
+  <title>House of Sanders</title>
 </head>
 <body>
   <div class="container">
-    <h1>Bott's Pizza</h1>
+    <h1>House of Sanders Pizza</h1>
+    <ul class="contact-info">
+      <li>175 N 1st Street Kalama, WA 98625</li>
+      <li>Phone: 360-335-5555</li>
+    </ul>
+    <div class="intro-splash jumbotron">
+    <h4>Welcome to House of Sanders!</h4>
+    <p>We offer the finest in pizza pies! We offer different sizes and only the finest in toppings. If you wish to place an order please click the <b>Order Now</b> button. Otherwise feel free to give us a call or drop in!</p>
+    <button id="order-now" class="btn btn-success">Order Now</button>
+    </div>
     <div class="order" id="pizza0">
       <div class="size">
         <h4>Pizza Size</h4>
@@ -19,12 +28,16 @@
           <option value="large">Large</option>
         </select>
       </div>
-      <div class="add-a-topping-button">
-        <button id="addTopping">Add a Topping!</button>
-      </div>
       <div class="toppings">
+        <h4>Toppings</h4>
+        <div class="add-a-topping-button">
+          <button type="button" class="btn btn-warning" id="addTopping">Add a Topping!</button>
+        </div>
       </div>
-      <button type="button" id="submit">Submit Pizza</button>
+      <button class="btn btn-primary btn-lg" id="submit">Submit Order</button>
+    </div>
+    <div class="order-summary">
+      
     </div>
   </div>
 </body>

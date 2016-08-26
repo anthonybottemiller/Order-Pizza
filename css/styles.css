@@ -1,0 +1,11 @@
+h1 {
+  text-align: center;
+}
+.order {
+  display: none;
+}
+
+.contact-info {
+  list-style: none;
+  float: right;
+}
