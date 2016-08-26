@@ -8,6 +8,12 @@ pizza.prototype.sizePrice = function(size) {
   if (size === "medium"){return this.medium}
   if (size === "large"){return this.large}
 }
+pizza.prototype.pizzaPrice = function(sizePrice, toppingsPrice){
+
+}
+pizza.prototype.toppingsPrice = function() {
+  return 1.5;
+}
 $(document).ready(function(){
   var pizzaObject = new pizza;
   $("#submit").click(function(){
