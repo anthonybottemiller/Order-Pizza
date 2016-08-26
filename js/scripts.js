@@ -4,7 +4,7 @@ function pizza(){
   this.large = 8.50;
   this.pizzaSize;
   this.toppings = [];
-  this.numberOfToppings = 1;
+  this.numberOfToppings = 0;
 };
 
 pizza.prototype.sizePrice = function(size) {
@@ -17,9 +17,8 @@ pizza.prototype.pizzaPrice = function(sizePrice, toppingsPrice){
 return sizePrice+toppingsPrice;
 };
 
-pizza.prototype.toppingsPrice = function(topping) {
-  if (topping === "cheese"){return 1.5}
-  else {return 0};
+pizza.prototype.toppingsPrice = function() {
+  return this.numberOfToppings * 1.5;
 };
 
 function formatOutput(number){
@@ -36,7 +35,7 @@ function formatOutput(number){
 
 function writeNewToppingSelection(pizzaObject){
   pizzaObject.numberOfToppings += 1;
-  $(".toppings").append("<div id=toppings0-"+pizzaObject.numberOfToppings+"> <h4>Toppings</h4> <select class='toppings-dropdown'> <option value='none'>None</option> <option value='cheese'>Cheese</option> </select> </div>");
+  $(".toppings").append("<div id=toppings-0-"+pizzaObject.numberOfToppings+"> <h4>Toppings</h4> <select class='toppings-dropdown'> <option value='none'>None</option> <option value='cheese'>Cheese</option> </select> </div>");
 }
 
 $(document).ready(function(){
@@ -46,12 +45,11 @@ $(document).ready(function(){
     var customerInputSize = $(".order .size option:checked").val();
     var customerInputTopping = $(".order .toppings option:checked").val();
     var selectedSizePrice = pizzaObject.sizePrice(customerInputSize);
-    var selectedToppingPrice = pizzaObject.toppingsPrice(customerInputTopping);
+    var selectedToppingPrice = pizzaObject.toppingsPrice();
     var outputPrice = pizzaObject.pizzaPrice(selectedSizePrice, selectedToppingPrice);
     alert(formatOutput(outputPrice));
   });
   $("#addTopping").click(function(){
     writeNewToppingSelection(pizzaObject);
   });
-  debugger;
 });
