@@ -12,6 +12,10 @@ img {
   height: auto;
 }
 
+select{
+color: black;
+}
+
 .page-header {
   text-align: center;
   background-color: #FF8000;
